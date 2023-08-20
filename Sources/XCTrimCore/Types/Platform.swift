@@ -5,6 +5,8 @@ public enum Platform {
     case tvOS
     case tvOSSimulator
     case macOS
+    case watchOS
+    case watchOSSimulator
 }
 
 extension Platform {
@@ -22,6 +24,10 @@ extension Platform {
             return [.arm64, .x86_64]
         case .macOS:
             return [.arm64, .x86_64, .i386]
+        case .watchOS:
+            return [.arm64, .arm64_32, .armv7k]
+        case .watchOSSimulator:
+            return [.arm64, .i386, .x86_64]
         }
     }
 
@@ -43,6 +49,10 @@ extension Platform {
             return "tvos-\(archStr)-simulator"
         case .macOS:
             return "macos-\(archStr)"
+        case .watchOS:
+            return "watchos-\(archStr)"
+        case .watchOSSimulator:
+            return "watchos-\(archStr)-simulator"
         }
     }
 }

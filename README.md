@@ -21,3 +21,5 @@ This command will keep only ios version with arm64 slice and ios simulator versi
 |  tvos            |  arm64                     |
 |  tvossimulator   |  arm64, x86\_64            |
 |  macos           |  arm64, i386, x86\_64      |
+|  watchos         |  arm64, arm64\_32, armv7k  |
+|  watchossimulator|  arm64, i386, x86\_64      |

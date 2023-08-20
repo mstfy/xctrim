@@ -14,6 +14,8 @@ extension PlatformOptions: ExpressibleByArgument {
         case "tvos": platform = .tvOS
         case "tvossimulator": platform = .tvOSSimulator
         case "macos": platform = .macOS
+        case "watchos": platform = .watchOS
+        case "watchossimulator": platform = .watchOSSimulator
         default: return nil
         }
 
