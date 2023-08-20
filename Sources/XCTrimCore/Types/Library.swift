@@ -16,7 +16,8 @@ public struct Library: Codable, Equatable {
     public func edit(with architectures: [Architecture]) -> (Self, Set<Architecture>) {
         guard let platform = platform else { return (self, []) }
 
-        let supportedArchitectures = platform.supportedArchitectures.intersection(architectures)
+        let validatedArchitectures = platform.supportedArchitectures.intersection(architectures)
+        let supportedArchitectures = validatedArchitectures.intersection(self.supportedArchitectures)
         let deletedArchs = self.supportedArchitectures.subtracting(supportedArchitectures)
 
         var copy = self
