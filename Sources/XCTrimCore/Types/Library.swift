@@ -42,6 +42,10 @@ public extension Library {
             return .tvOS
         case ("macos", nil):
             return .macOS
+        case ("watchos", nil):
+            return .watchOS
+        case ("watchos", "simulator"):
+            return .watchOSSimulator
         default:
             return nil
         }

@@ -3,6 +3,8 @@ public enum Architecture: String, Codable {
     case i386
     case armv7
     case x86_64
+    case arm64_32
+    case armv7k
 }
 
 public extension Architecture {
@@ -20,6 +22,10 @@ public extension Architecture {
             return 2
         case .x86_64:
             return 3
+        case .arm64_32:
+            return 4
+        case .armv7k:
+            return 5
         }
     }
 }
